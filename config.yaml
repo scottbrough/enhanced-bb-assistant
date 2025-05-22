@@ -1,0 +1,378 @@
+# Enhanced Personal Bug Bounty Assistant Configuration
+# Version 2.0
+
+# API Configuration
+openai:
+  model: "gpt-4"  # or "gpt-3.5-turbo" for faster/cheaper operations
+  temperature: 0.7
+  max_tokens: 4000
+  timeout: 60
+
+# Platform Integration
+platforms:
+  hackerone:
+    enabled: true
+    base_url: "https://api.hackerone.com/v1"
+    # Set credentials via environment variables:
+    # HACKERONE_USERNAME and HACKERONE_API_TOKEN
+    auto_submit: false  # Set to true for automatic report submission
+    rate_limit: 10  # requests per minute
+    
+  bugcrowd:
+    enabled: true
+    base_url: "https://api.bugcrowd.com/v2"
+    # Set credentials via environment variables:
+    # BUGCROWD_API_TOKEN
+    auto_submit: false
+    rate_limit: 15  # requests per minute
+
+# Scope Validation
+scope_validation:
+  enabled: true  # CRITICAL: Always enable for safety
+  strict_mode: true  # Reject anything not explicitly in scope
+  domain_validation: true
+  ip_validation: true
+  subdomain_validation: true
+  
+# Aggressive Testing Configuration
+aggressive_testing:
+  enabled: true  # Enable WAF evasion and advanced techniques
+  max_evasion_attempts: 10
+  waf_detection: true
+  evasion_techniques:
+    - encoding
+    - case_variation
+    - comment_insertion
+    - whitespace_manipulation
+    - parameter_pollution
+    - header_manipulation
+  
+  # WAF-specific evasion strategies
+  waf_strategies:
+    cloudflare:
+      - encoding
+      - case_variation
+      - whitespace_manipulation
+    aws_waf:
+      - parameter_pollution
+      - header_manipulation
+    akamai:
+      - comment_insertion
+      - encoding
+    imperva:
+      - protocol_confusion
+      - ip_obfuscation
+
+# Tool Integration (set to false if tools not installed)
+tools:
+  subfinder: true
+  amass: true
+  ffuf: true
+  httpx: true
+  nuclei: true
+  nmap: false  # Can be resource intensive
+  masscan: false  # Requires root privileges
+  gobuster: true
+  dirb: false
+  nikto: false
+  sqlmap: false  # Use with extreme caution
+
+# Burp Suite Integration
+burp_integration:
+  enabled: false  # Set to true if you have Burp Suite Professional
+  api_url: "http://127.0.0.1:1337"  # Burp REST API endpoint
+  api_key: ""  # Set via environment variable BURP_API_KEY
+  project_name: "bug_bounty_scan"
+  scan_types:
+    - "crawl_and_audit"
+    - "passive_audit"
+
+# Reconnaissance Settings
+recon:
+  max_subdomains: 50
+  max_endpoints_per_target: 100
+  timeout: 15
+  threads: 10
+  user_agents:
+    rotate: true
+    custom_agents:
+      - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+      - "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
+  
+  # Content discovery paths
+  common_paths:
+    - "/"
+    - "/admin"
+    - "/api"
+    - "/api/v1"
+    - "/api/v2"
+    - "/login"
+    - "/dashboard"
+    - "/config"
+    - "/backup"
+    - "/test"
+    - "/dev"
+    - "/staging"
+    - "/uploads"
+    - "/files"
+    - "/docs"
+    - "/swagger"
+    - "/graphql"
+    - "/robots.txt"
+    - "/sitemap.xml"
+    - "/.env"
+    - "/.git"
+    - "/wp-admin"
+    - "/wp-content"
+    - "/phpinfo.php"
+    - "/server-status"
+    - "/debug"
+    - "/.htaccess"
+    - "/composer.json"
+    - "/package.json"
+    - "/yarn.lock"
+    - "/Dockerfile"
+    - "/.dockerignore"
+
+# JavaScript Analysis
+javascript_analysis:
+  enabled: true
+  max_files_to_analyze: 15
+  ai_analysis_for_large_files: true
+  min_file_size_for_ai: 1000  # bytes
+  max_file_size: 5242880  # 5MB
+  secret_patterns:
+    - api_key
+    - access_token
+    - secret_key
+    - password
+    - database_url
+    - aws_key
+    - jwt_token
+    - oauth_token
+  endpoint_extraction: true
+  vulnerability_patterns: true
+
+# Enhanced Vulnerability Detection
+vulnerability_detection:
+  sql_injection:
+    error_based: true
+    time_based: true
+    union_based: true
+    boolean_based: true
+    timeout: 10  # seconds for time-based detection
+    
+  xss:
+    reflected: true
+    dom_based: true
+    stored: false  # Requires manual verification
+    polyglot_payloads: true
+    
+  ssrf:
+    internal_networks: true
+    cloud_metadata: true
+    file_protocols: true
+    dns_lookup: true
+    
+  lfi:
+    common_files: true
+    log_poisoning: false  # Potentially destructive
+    wrapper_techniques: true
+    
+  rce:
+    command_injection: true
+    code_injection: true
+    expression_language: true
+    
+  idor:
+    numeric_incrementation: true
+    uuid_prediction: false
+    hash_collision: false
+    
+  auth_bypass:
+    sql_injection: true
+    nosql_injection: true
+    jwt_manipulation: true
+    session_fixation: true
+
+# Rate Limiting and Safety
+rate_limiting:
+  enabled: true
+  base_delay: 1.0  # seconds between requests
+  randomize_delays: true
+  max_delay: 3.0
+  respect_robots_txt: true
+  max_concurrent_requests: 5
+  adaptive_throttling: true  # Slow down if errors detected
+  
+# Request Configuration
+requests:
+  timeout: 15
+  max_retries: 3
+  verify_ssl: false  # For testing environments
+  follow_redirects: true
+  max_redirects: 5
+  headers:
+    default:
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+      "Accept-Language": "en-US,en;q=0.5"
+      "Accept-Encoding": "gzip, deflate"
+      "DNT": "1"
+      "Connection": "keep-alive"
+      "Upgrade-Insecure-Requests": "1"
+
+# Reporting Settings
+reporting:
+  formats:
+    - markdown
+    - html
+    - json
+  include_screenshots: false  # Requires selenium
+  include_poc_scripts: true
+  include_burp_state: false
+  
+  severity_mapping:
+    critical: 9.0
+    high: 7.0
+    medium: 5.0
+    low: 3.0
+    info: 1.0
+    
+  cvss_calculation: true
+  remediation_advice: true
+  
+  # Platform-specific formatting
+  platform_templates:
+    hackerone:
+      include_cvss: true
+      include_cwe: true
+      include_owasp: true
+    bugcrowd:
+      include_vrt: true  # Vulnerability Rating Taxonomy
+      include_impact: true
+
+# Chain Detection
+chain_detection:
+  enabled: true
+  max_chain_length: 5
+  ai_analysis: true
+  impact_calculation: true
+  business_context: true
+
+# Exploit Generation
+exploit_generation:
+  enabled: true
+  generate_poc_scripts: true
+  include_payload_variations: true
+  safety_checks: true  # Prevent destructive payloads
+  
+# Custom Wordlists (paths to custom wordlists)
+wordlists:
+  directories: null  # Path to custom directory wordlist
+  subdomains: null   # Path to custom subdomain wordlist
+  parameters: null   # Path to custom parameter wordlist
+  passwords: null    # Path to password list (use with caution)
+
+# Proxy Configuration
+proxy:
+  enabled: false
+  http_proxy: null   # "http://proxy:8080"
+  https_proxy: null  # "https://proxy:8080"
+  socks_proxy: null  # "socks5://proxy:1080"
+  
+  # Proxy rotation
+  rotation:
+    enabled: false
+    proxy_list: []   # List of proxy URLs
+
+# Cloud Integration (optional)
+cloud:
+  aws:
+    enabled: false
+    profile: "default"
+    region: "us-east-1"
+    
+  gcp:
+    enabled: false
+    project_id: null
+    credentials_path: null
+    
+  azure:
+    enabled: false
+    subscription_id: null
+
+# Database Configuration (for caching and results)
+database:
+  enabled: false
+  type: "sqlite"  # sqlite, postgresql, mysql
+  url: "sqlite:///bug_bounty_results.db"
+  
+# Notification Settings
+notifications:
+  enabled: false
+  slack:
+    webhook_url: null  # Set via environment variable
+    channel: "#bug-bounty"
+  
+  discord:
+    webhook_url: null
+    
+  email:
+    smtp_server: null
+    smtp_port: 587
+    username: null
+    password: null  # Set via environment variable
+    to_address: null
+
+# Output and Workspace
+output:
+  workspace_base: "./hunts"
+  save_raw_responses: false
+  compress_workspace: false
+  auto_cleanup_days: 30
+  backup_results: true
+  
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file_logging: true
+  console_logging: true
+  log_rotation: true
+  max_log_size: "10MB"
+  backup_count: 5
+
+# Security and Safety
+security:
+  # Prevent testing of these domains (safety list)
+  blocked_domains:
+    - "localhost"
+    - "127.0.0.1"
+    - "::1"
+    - "0.0.0.0"
+    - "internal"
+    - "corp"
+    - "local"
+  
+  # Maximum severity for auto-exploitation
+  max_auto_exploit_severity: "medium"
+  
+  # Require manual confirmation for these actions
+  manual_confirmation_required:
+    - "rce_testing"
+    - "sql_injection_exploitation"
+    - "file_upload_testing"
+  
+# Performance Tuning
+performance:
+  max_memory_usage: "2GB"
+  max_cpu_usage: 80  # percentage
+  cache_results: true
+  cache_ttl: 3600  # seconds
+  
+# Development and Debugging
+debug:
+  enabled: false
+  save_debug_info: false
+  verbose_ai_prompts: false
+  mock_external_apis: false
