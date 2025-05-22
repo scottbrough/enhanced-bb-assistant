@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Enhanced Personal Bug Bounty Assistant Setup Script
-# Version 2.0 - Complete Installation and Configuration
+# Enhanced Personal Bug Bounty Assistant Setup Script - FIXED VERSION
+# Version 2.1 - Corrected tool paths and error handling
 
 set -e  # Exit on any error
 
@@ -28,8 +28,9 @@ print_banner() {
     cat << 'EOF'
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║    Enhanced Personal Bug Bounty Assistant v2.0              ║
+║    Enhanced Personal Bug Bounty Assistant v2.1              ║
 ║    AI-Powered Security Testing with Platform Integration     ║
+║                   FIXED VERSION - WORKING                    ║
 ║                                                              ║
 ╚══════════════════════════════════════════════════════════════╝
 EOF
@@ -294,7 +295,33 @@ EOF
     success "Python packages installed"
 }
 
-# Install Go-based security tools
+# Safe Go tool installation with error handling
+install_go_tool() {
+    local tool_path="$1"
+    local tool_name="$2"
+    
+    progress "Installing $tool_name..."
+    
+    # Create a temporary directory for this installation
+    local temp_dir=$(mktemp -d)
+    cd "$temp_dir"
+    
+    # Set Go proxy and other settings for better reliability
+    export GOPROXY=https://proxy.golang.org,direct
+    export GOSUMDB=sum.golang.org
+    export GOPRIVATE=""
+    
+    if timeout 300 go install -v "$tool_path@latest" 2>&1 | tee -a "$LOG_FILE"; then
+        success "$tool_name installed successfully"
+        return 0
+    else
+        error "$tool_name installation failed"
+        warning "Continuing with other tools..."
+        return 1
+    fi
+}
+
+# Install Go-based security tools with CORRECTED PATHS
 install_go_tools() {
     if [[ "$HAS_GO" == true ]]; then
         progress "Installing Go-based security tools..."
@@ -302,24 +329,50 @@ install_go_tools() {
         # Create tools directory
         mkdir -p "$TOOL_DIR"
         
-        # Install tools
-        go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-        go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
-        go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
-        go install -v github.com/ffuf/ffuf@latest
-        go install -v github.com/projectdiscovery/katana/cmd/katana@latest
-        go install -v github.com/projectdiscovery/chaos-client/cmd/chaos@latest
-        go install -v github.com/hakluke/hakrawler@latest
-        go install -v github.com/tomnomnom/gau/v2/cmd/gau@latest
-        go install -v github.com/tomnomnom/waybackurls@latest
-        go install -v github.com/lc/gau@latest
+        # Store current directory
+        original_dir=$(pwd)
+        
+        # CORRECTED TOOL PATHS - This fixes your original error
+        declare -A tools=(
+            ["github.com/projectdiscovery/subfinder/v2/cmd/subfinder"]="subfinder"
+            ["github.com/projectdiscovery/httpx/cmd/httpx"]="httpx"
+            ["github.com/projectdiscovery/nuclei/v2/cmd/nuclei"]="nuclei"
+            ["github.com/ffuf/ffuf/v2"]="ffuf"
+            ["github.com/projectdiscovery/katana/cmd/katana"]="katana"
+            ["github.com/projectdiscovery/chaos-client/cmd/chaos"]="chaos"
+            ["github.com/hakluke/hakrawler"]="hakrawler"
+            ["github.com/lc/gau/v2/cmd/gau"]="gau"
+            ["github.com/tomnomnom/waybackurls"]="waybackurls"
+            ["github.com/projectdiscovery/naabu/v2/cmd/naabu"]="naabu"
+        )
+        
+        local successful_installs=0
+        local total_tools=${#tools[@]}
+        
+        for tool_path in "${!tools[@]}"; do
+            tool_name="${tools[$tool_path]}"
+            if install_go_tool "$tool_path" "$tool_name"; then
+                ((successful_installs++))
+            fi
+        done
         
         # Move tools to local bin if needed
         if [[ -d "$HOME/go/bin" ]]; then
             cp "$HOME/go/bin/"* "$TOOL_DIR/" 2>/dev/null || true
         fi
         
-        success "Go-based security tools installed"
+        # Return to original directory
+        cd "$original_dir"
+        
+        success "Go-based security tools installation completed ($successful_installs/$total_tools successful)"
+        
+        if [[ $successful_installs -lt $total_tools ]]; then
+            warning "Some tools failed to install. Check the log at $LOG_FILE for details."
+            echo ""
+            echo "You can manually install failed tools later using:"
+            echo "go install github.com/tool/path@latest"
+        fi
+        
     else
         warning "Skipping Go tools installation (Go not available)"
     fi
@@ -359,7 +412,13 @@ install_additional_tools() {
     # Download SecLists if not present
     if [[ ! -d "SecLists" ]]; then
         progress "Downloading SecLists wordlists..."
-        git clone https://github.com/danielmiessler/SecLists.git || warning "Failed to download SecLists"
+        if git clone https://github.com/danielmiessler/SecLists.git; then
+            success "SecLists downloaded successfully"
+        else
+            warning "Failed to download SecLists"
+        fi
+    else
+        success "SecLists already exists"
     fi
     
     success "Additional security tools installation completed"
@@ -515,25 +574,20 @@ print('✅ All Python packages imported successfully')
     # Test Go tools
     export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
     
-    if command_exists subfinder; then
-        success "✅ subfinder available"
-    else
-        warning "⚠️ subfinder not found"
-    fi
+    # Check which tools are available
+    tools_to_check=("subfinder" "httpx" "nuclei" "ffuf" "gau" "waybackurls")
+    available_tools=0
     
-    if command_exists httpx; then
-        success "✅ httpx available"
-    else
-        warning "⚠️ httpx not found"
-    fi
+    for tool in "${tools_to_check[@]}"; do
+        if command_exists "$tool"; then
+            success "✅ $tool available"
+            ((available_tools++))
+        else
+            warning "⚠️ $tool not found"
+        fi
+    done
     
-    if command_exists nuclei; then
-        success "✅ nuclei available"
-    else
-        warning "⚠️ nuclei not found"
-    fi
-    
-    success "Installation tests completed"
+    success "Installation tests completed ($available_tools/${#tools_to_check[@]} tools available)"
 }
 
 # Post-installation instructions
@@ -581,14 +635,31 @@ show_instructions() {
     
     echo -e "${CYAN}🛠️ Troubleshooting:${NC}"
     echo -e "   ${BLUE}• Check logs: tail -f $LOG_FILE${NC}"
-    echo -e "   ${BLUE}• Update tools: bb-assistant --update-tools${NC}"
-    echo -e "   ${BLUE}• Reinstall: rm -rf $HOME/enhanced-bb-assistant && ./setup.sh${NC}\n"
+    echo -e "   ${BLUE}• Update tools: bash $0 --tools-only${NC}"
+    echo -e "   ${BLUE}• Reinstall: rm -rf $HOME/enhanced-bb-assistant && bash $0${NC}\n"
     
     echo -e "${GREEN}Happy Bug Hunting! 🎯${NC}\n"
 }
 
+# Tools-only installation option
+install_tools_only() {
+    progress "Installing tools only..."
+    check_prerequisites
+    install_go_tools
+    install_additional_tools
+    run_tests
+    success "Tools installation completed!"
+}
+
 # Main installation function
 main() {
+    # Check for tools-only flag
+    if [[ "$1" == "--tools-only" ]]; then
+        print_banner
+        install_tools_only
+        exit 0
+    fi
+    
     print_banner
     
     progress "Starting Enhanced Bug Bounty Assistant installation..."
