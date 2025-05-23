@@ -219,17 +219,38 @@ class EnhancedBugBountyAssistantV3:
         
         Focus on maximizing earnings per hour spent.
         
-        Return your analysis as a JSON object with structured recommendations.
+        Return your analysis as valid JSON with proper structure.
         """
         
         try:
             response = self.client.chat.completions.create(
                 model="gpt-4",
                 messages=[{"role": "user", "content": prompt}],
-                temperature=0.7
+                temperature=0.7,
+                max_tokens=2000
             )
-            # Expect JSON in content, parse manually
-            analysis = json.loads(response.choices[0].message.content)
+            
+            # Parse the response content
+            content = response.choices[0].message.content
+            
+            # Clean up the content
+            if content.startswith("```json"):
+                content = content[7:]
+            if content.endswith("```"):
+                content = content[:-3]
+            
+            # Try to parse as JSON
+            try:
+                analysis = json.loads(content.strip())
+            except json.JSONDecodeError:
+                # If parsing fails, create a structured response from the text
+                analysis = {
+                    "raw_analysis": content,
+                    "technology_predictions": {"error": "JSON parsing failed"},
+                    "attack_vectors": [],
+                    "quick_wins": [],
+                    "monitoring_recommendations": []
+                }
             
             # Add revenue insights
             analysis['revenue_optimization'] = {
@@ -250,6 +271,7 @@ class EnhancedBugBountyAssistantV3:
         except Exception as e:
             logger.error(f"❌ AI analysis failed: {e}")
             return {"error": str(e)}
+
     
     def intelligent_recon(self) -> Dict:
         """Enhanced reconnaissance with API discovery and revenue focus"""
@@ -568,12 +590,20 @@ class EnhancedBugBountyAssistantV3:
         analytics = self.revenue_maximizer.get_earnings_analytics()
         schedule = self.revenue_maximizer.optimize_testing_schedule()
         
-        # Calculate hunt metrics
+        # Calculate hunt metrics - FIX for the time parsing error
         try:
-            start_time_obj = datetime.strptime(self.session_data['start_time'], "%Y-%m-%dT%H:%M:%S.%f")
-        except ValueError:
-            # Fallback if microseconds are missing
-            start_time_obj = datetime.strptime(self.session_data['start_time'], "%Y-%m-%dT%H:%M:%S")
+            # Handle different datetime formats
+            start_time_str = self.session_data['start_time']
+            if '.' in start_time_str:
+                # Has microseconds
+                start_time_obj = datetime.strptime(start_time_str, "%Y-%m-%dT%H:%M:%S.%f")
+            else:
+                # No microseconds
+                start_time_obj = datetime.strptime(start_time_str, "%Y-%m-%dT%H:%M:%S")
+        except (ValueError, KeyError):
+            # Fallback to current time minus 1 hour
+            start_time_obj = datetime.now() - timedelta(hours=1)
+            
         hunt_duration = time.time() - start_time_obj.timestamp()
         findings_value = sum(f.get('estimated_bounty', 0) for f in self.findings)
         chains_value = sum(c.get('estimated_bounty', 0) for c in self.chains)
@@ -1059,22 +1089,66 @@ class EnhancedBugBountyAssistantV3:
         - File upload vulnerabilities
         - JWT manipulation
         
-        Return JSON array of payloads with type, parameter, payload, and estimated_bounty.
+        Return as a JSON array with this structure:
+        [
+            {{
+                "type": "vulnerability_type",
+                "parameter": "parameter_name",
+                "payload": "actual_payload",
+                "estimated_bounty": 1000
+            }}
+        ]
         """
         
         try:
             response = self.client.chat.completions.create(
                 model="gpt-4",
                 messages=[{"role": "user", "content": prompt}],
-                temperature=0.8
+                temperature=0.8,
+                max_tokens=1500
             )
-            result = json.loads(response.choices[0].message.content)
-            return result.get("payloads", [])
             
+            content = response.choices[0].message.content
+            
+            # Clean up the content
+            if content.startswith("```json"):
+                content = content[7:]
+            if content.endswith("```"):
+                content = content[:-3]
+            
+            try:
+                result = json.loads(content.strip())
+                
+                # Ensure it's a list
+                if isinstance(result, dict) and 'payloads' in result:
+                    return result['payloads']
+                elif isinstance(result, list):
+                    return result
+                else:
+                    raise ValueError("Unexpected response format")
+                    
+            except (json.JSONDecodeError, ValueError):
+                # Return default payloads if parsing fails
+                logger.warning("Failed to parse AI payloads, using defaults")
+                return [
+                    {
+                        'type': 'xss',
+                        'payload': '<script>alert("XSS_TEST")</script>',
+                        'parameter': 'input',
+                        'estimated_bounty': 500
+                    },
+                    {
+                        'type': 'sqli',
+                        'payload': "' OR '1'='1",
+                        'parameter': 'id',
+                        'estimated_bounty': 1000
+                    }
+                ]
+                
         except Exception as e:
             logger.error(f"AI payload generation failed: {e}")
             return []
-    
+
     def _extract_title(self, html: str) -> str:
         """Extract title from HTML"""
         try:

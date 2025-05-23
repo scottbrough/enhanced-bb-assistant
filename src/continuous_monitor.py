@@ -10,7 +10,7 @@ import hashlib
 import json
 import sqlite3
 from datetime import datetime, timedelta
-from typing import Dict, List, Set, Optional
+from typing import Dict, List, Set, Optional, Tuple
 from pathlib import Path
 import logging
 import difflib
@@ -335,8 +335,7 @@ class ContinuousMonitor:
         
         # Previous snapshot data
         prev_endpoints_hash, prev_js_hash, prev_response_hashes = previous
-        prev_response_hashes = json.loads(prev_response_hashes) if prev_response_hashes else {}
-        
+        prev_response_hashes = json.loads(prev_response_hashes) if prev_response_hashes and isinstance(prev_response_hashes, str) else {}        
         # Current snapshot hashes
         curr_endpoints_hash = hashlib.sha256(
             str(sorted(current['endpoints'])).encode()
