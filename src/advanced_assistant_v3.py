@@ -226,10 +226,9 @@ class EnhancedBugBountyAssistantV3:
             response = self.client.chat.completions.create(
                 model="gpt-4",
                 messages=[{"role": "user", "content": prompt}],
-                response_format={"type": "json_object"},
                 temperature=0.7
             )
-            
+            # Expect JSON in content, parse manually
             analysis = json.loads(response.choices[0].message.content)
             
             # Add revenue insights
@@ -491,7 +490,6 @@ class EnhancedBugBountyAssistantV3:
             response = self.client.chat.completions.create(
                 model="gpt-4",
                 messages=[{"role": "user", "content": prompt}],
-                response_format={"type": "json_object"},
                 temperature=0.7
             )
             
@@ -571,7 +569,12 @@ class EnhancedBugBountyAssistantV3:
         schedule = self.revenue_maximizer.optimize_testing_schedule()
         
         # Calculate hunt metrics
-        hunt_duration = time.time() - time.mktime(time.strptime(self.session_data['start_time'], "%Y-%m-%dT%H:%M:%S.%f"))
+        try:
+            start_time_obj = datetime.strptime(self.session_data['start_time'], "%Y-%m-%dT%H:%M:%S.%f")
+        except ValueError:
+            # Fallback if microseconds are missing
+            start_time_obj = datetime.strptime(self.session_data['start_time'], "%Y-%m-%dT%H:%M:%S")
+        hunt_duration = time.time() - start_time_obj.timestamp()
         findings_value = sum(f.get('estimated_bounty', 0) for f in self.findings)
         chains_value = sum(c.get('estimated_bounty', 0) for c in self.chains)
         total_potential = findings_value + chains_value
@@ -959,10 +962,8 @@ class EnhancedBugBountyAssistantV3:
             response = self.client.chat.completions.create(
                 model="gpt-4",
                 messages=[{"role": "user", "content": prompt}],
-                response_format={"type": "json_object"},
                 temperature=0.5
             )
-            
             result = json.loads(response.choices[0].message.content)
             return result.get("interesting_endpoints", [])
             
@@ -1065,10 +1066,8 @@ class EnhancedBugBountyAssistantV3:
             response = self.client.chat.completions.create(
                 model="gpt-4",
                 messages=[{"role": "user", "content": prompt}],
-                response_format={"type": "json_object"},
                 temperature=0.8
             )
-            
             result = json.loads(response.choices[0].message.content)
             return result.get("payloads", [])
             

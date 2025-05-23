@@ -1,0 +1,342 @@
+{
+  "subdomains": [
+    "bbs.x.com",
+    "cards-dev.x.com",
+    "api.cloud.x.com",
+    "a-b.x.com",
+    "tw-ton.x.com",
+    "webhooks.payments-dev.x.com",
+    "web-api.money-dev.x.com",
+    "3ivl7.x.com",
+    "publish.x.com",
+    "ax.x.com",
+    "identity.x.com",
+    "realm-west1.x.com",
+    "www.shop.x.com",
+    "syndication.x.com",
+    "demo.cloud.x.com",
+    "admin.money-dev.x.com",
+    "sitestream.x.com",
+    "api.sandbox.x.com",
+    "83fmp.x.com",
+    "5yk7i.x.com"
+  ],
+  "endpoints": [
+    {
+      "url": "https://x.com/",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/admin",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/api",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/login",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/dashboard",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/config",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/backup",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/test",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/dev",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/staging",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/uploads",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/files",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/docs",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/swagger",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/graphql",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/robots.txt",
+      "status": 200,
+      "length": 1350,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/sitemap.xml",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/.env",
+      "status": 403,
+      "length": 4509,
+      "title": "Attention Required! | Cloudflare"
+    },
+    {
+      "url": "https://x.com/.git",
+      "status": 403,
+      "length": 4509,
+      "title": "Attention Required! | Cloudflare"
+    },
+    {
+      "url": "https://x.com/wp-admin",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://cards-dev.x.com/",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://cards-dev.x.com/admin",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://cards-dev.x.com/api",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://cards-dev.x.com/login",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://cards-dev.x.com/dashboard",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://cards-dev.x.com/config",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://cards-dev.x.com/backup",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://cards-dev.x.com/test",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://cards-dev.x.com/dev",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://cards-dev.x.com/staging",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://cards-dev.x.com/uploads",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://cards-dev.x.com/files",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://cards-dev.x.com/docs",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://cards-dev.x.com/swagger",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://cards-dev.x.com/graphql",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://cards-dev.x.com/robots.txt",
+      "status": 200,
+      "length": 26,
+      "title": ""
+    },
+    {
+      "url": "https://cards-dev.x.com/sitemap.xml",
+      "status": 404,
+      "length": 116,
+      "title": ""
+    },
+    {
+      "url": "https://cards-dev.x.com/.env",
+      "status": 403,
+      "length": 4509,
+      "title": "Attention Required! | Cloudflare"
+    },
+    {
+      "url": "https://cards-dev.x.com/.git",
+      "status": 403,
+      "length": 4509,
+      "title": "Attention Required! | Cloudflare"
+    },
+    {
+      "url": "https://cards-dev.x.com/wp-admin",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    }
+  ],
+  "technologies": [],
+  "interesting_findings": [
+    {
+      "url": "https://x.com/",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/admin",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/api",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/login",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/dashboard",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/config",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/backup",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/test",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/dev",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/staging",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    }
+  ],
+  "javascript_analysis": {
+    "js_files_found": 0,
+    "endpoints_discovered": [],
+    "secrets_found": [],
+    "vulnerabilities_detected": [],
+    "ai_analysis": [],
+    "files_analyzed": []
+  },
+  "scope_validation": {
+    "in_scope_targets": [],
+    "out_of_scope_targets": [],
+    "validation_enabled": true
+  }
+}

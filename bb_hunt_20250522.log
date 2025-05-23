@@ -1,0 +1,211 @@
+2025-05-22 19:02:37,701 - INFO - 🚀 Enhanced Bug Bounty Assistant initialized
+2025-05-22 19:02:37,701 - INFO - 🎯 Starting enhanced hunt on x.com~
+2025-05-22 19:02:37,701 - INFO - 📁 Workspace: hunt_x_com~_20250522_190237
+2025-05-22 19:02:37,701 - INFO - 🔍 Gathering target intelligence for x.com~
+2025-05-22 19:02:37,701 - INFO - 🚨 Aggressive mode enabled - WAF evasion active
+2025-05-22 19:02:37,701 - INFO - 📖 WAF Contingency Guide available in workspace
+2025-05-22 19:02:37,702 - INFO - 🧠 Analyzing target with AI...
+2025-05-22 19:02:39,225 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 19:02:39,227 - ERROR - ❌ AI analysis failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 19:02:39,228 - INFO - 🔍 Starting intelligent reconnaissance...
+2025-05-22 19:02:39,228 - INFO - Finding subdomains...
+2025-05-22 19:03:16,588 - WARNING - ⚠️ No scope validation - testing all discovered targets
+2025-05-22 19:03:16,588 - INFO - Discovering content...
+2025-05-22 19:03:16,602 - INFO - 🧠 AI analyzing discovered endpoints...
+2025-05-22 19:03:16,603 - INFO - 🔍 Analyzing JavaScript files...
+2025-05-22 19:03:16,603 - INFO - 🔍 Discovering and analyzing JavaScript files for x.com~
+2025-05-22 19:03:16,609 - INFO - ✅ JS analysis complete: 0 files, 0 endpoints, 0 secrets
+2025-05-22 19:03:16,610 - INFO - ✅ Enhanced recon complete: 0 endpoints, 0 interesting, 0 from JS
+2025-05-22 19:03:16,610 - INFO - 🎯 Starting enhanced vulnerability hunting...
+2025-05-22 19:03:16,610 - INFO - ✅ Enhanced vulnerability hunting complete: 0 potential issues found
+2025-05-22 19:03:16,610 - INFO - No findings to chain
+2025-05-22 19:03:16,610 - INFO - 💥 Generating exploits and PoCs with AI...
+2025-05-22 19:03:16,611 - INFO - ✅ PoC scripts generated in hunt_x_com~_20250522_190237/poc_scripts
+2025-05-22 19:03:16,611 - INFO - ✅ Enhanced exploit generation complete
+2025-05-22 19:03:16,611 - INFO - 📝 Generating enhanced professional report...
+2025-05-22 19:03:16,611 - ERROR - ❌ Enhanced hunt failed: unsupported operand type(s) for -: 'float' and 'str'
+2025-05-22 19:09:33,365 - INFO - 🚀 Enhanced Bug Bounty Assistant initialized
+2025-05-22 19:09:33,365 - INFO - 🎯 Starting enhanced hunt on x.com
+2025-05-22 19:09:33,365 - INFO - 📁 Workspace: hunt_x_com_20250522_190933
+2025-05-22 19:09:33,365 - INFO - 🔍 Gathering target intelligence for x.com
+2025-05-22 19:09:33,366 - INFO - 🚨 Aggressive mode enabled - WAF evasion active
+2025-05-22 19:09:33,366 - INFO - 📖 WAF Contingency Guide available in workspace
+2025-05-22 19:09:33,366 - INFO - 🧠 Analyzing target with AI...
+2025-05-22 19:09:33,954 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 19:09:33,955 - ERROR - ❌ AI analysis failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 19:09:33,956 - INFO - 🔍 Starting intelligent reconnaissance...
+2025-05-22 19:09:33,956 - INFO - Finding subdomains...
+2025-05-22 19:13:09,520 - INFO - 🚀 Enhanced Bug Bounty Assistant initialized
+2025-05-22 19:13:09,520 - INFO - 🎯 Starting enhanced hunt on x.com
+2025-05-22 19:13:09,520 - INFO - 📁 Workspace: hunt_x_com_20250522_191309
+2025-05-22 19:13:09,520 - INFO - 🔍 Gathering target intelligence for x.com
+2025-05-22 19:13:09,521 - INFO - 🚨 Aggressive mode enabled - WAF evasion active
+2025-05-22 19:13:09,521 - INFO - 📖 WAF Contingency Guide available in workspace
+2025-05-22 19:13:09,521 - INFO - 🧠 Analyzing target with AI...
+2025-05-22 19:13:10,027 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 19:13:10,029 - ERROR - ❌ AI analysis failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 19:13:10,029 - INFO - 🔍 Starting intelligent reconnaissance...
+2025-05-22 19:13:10,029 - INFO - Finding subdomains...
+2025-05-22 19:18:41,145 - WARNING - ⚠️ No scope validation - testing all discovered targets
+2025-05-22 19:18:41,146 - INFO - Discovering content...
+2025-05-22 19:18:58,016 - INFO - 🧠 AI analyzing discovered endpoints...
+2025-05-22 19:18:58,213 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 19:18:58,217 - ERROR - AI endpoint classification failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 19:18:58,217 - INFO - 🔍 Analyzing JavaScript files...
+2025-05-22 19:18:58,217 - INFO - 🔍 Discovering and analyzing JavaScript files for x.com
+2025-05-22 19:19:00,924 - INFO - ✅ JS analysis complete: 0 files, 0 endpoints, 0 secrets
+2025-05-22 19:19:00,925 - INFO - ✅ Enhanced recon complete: 40 endpoints, 10 interesting, 0 from JS
+2025-05-22 19:19:00,925 - INFO - 🎯 Starting enhanced vulnerability hunting...
+2025-05-22 19:19:00,925 - INFO - Testing: https://x.com/
+2025-05-22 19:19:01,056 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 19:19:01,057 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 19:19:01,057 - INFO - Testing: https://x.com/admin
+2025-05-22 19:19:01,190 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 19:19:01,191 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 19:19:01,192 - INFO - Testing: https://x.com/api
+2025-05-22 19:19:01,343 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 19:19:01,345 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 19:19:01,345 - INFO - Testing: https://x.com/login
+2025-05-22 19:19:01,469 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 19:19:01,471 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 19:19:01,472 - INFO - Testing: https://x.com/dashboard
+2025-05-22 19:19:01,613 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 19:19:01,614 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 19:19:01,614 - INFO - Testing: https://x.com/config
+2025-05-22 19:19:01,737 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 19:19:01,738 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 19:19:01,738 - INFO - Testing: https://x.com/backup
+2025-05-22 19:19:01,864 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 19:19:01,865 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 19:19:01,865 - INFO - Testing: https://x.com/test
+2025-05-22 19:19:01,994 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 19:19:01,996 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 19:19:01,996 - INFO - Testing: https://x.com/dev
+2025-05-22 19:19:02,127 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 19:19:02,128 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 19:19:02,129 - INFO - Testing: https://x.com/staging
+2025-05-22 19:19:02,271 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 19:19:02,272 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 19:19:02,273 - INFO - ✅ Enhanced vulnerability hunting complete: 0 potential issues found
+2025-05-22 19:19:02,273 - INFO - No findings to chain
+2025-05-22 19:19:02,273 - INFO - 💥 Generating exploits and PoCs with AI...
+2025-05-22 19:19:02,273 - INFO - ✅ PoC scripts generated in hunt_x_com_20250522_191309/poc_scripts
+2025-05-22 19:19:02,273 - INFO - ✅ Enhanced exploit generation complete
+2025-05-22 19:19:02,274 - INFO - 📝 Generating enhanced professional report...
+2025-05-22 19:19:02,274 - ERROR - ❌ Enhanced hunt failed: unsupported operand type(s) for -: 'float' and 'str'
+2025-05-22 20:31:10,592 - INFO - 🚀 Enhanced Bug Bounty Assistant initialized
+2025-05-22 20:31:10,594 - INFO - 🎯 Starting enhanced hunt on x.com
+2025-05-22 20:31:10,594 - INFO - 📁 Workspace: hunt_x_com_20250522_203110
+2025-05-22 20:31:10,594 - INFO - 🔍 Gathering target intelligence for x.com
+2025-05-22 20:31:10,594 - INFO - 🚨 Aggressive mode enabled - WAF evasion active
+2025-05-22 20:31:10,595 - INFO - 📖 WAF Contingency Guide available in workspace
+2025-05-22 20:31:10,595 - INFO - 🧠 Analyzing target with AI...
+2025-05-22 20:31:32,347 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-22 20:31:32,350 - ERROR - ❌ AI analysis failed: Expecting value: line 1 column 1 (char 0)
+2025-05-22 20:31:32,351 - INFO - 🔍 Starting intelligent reconnaissance...
+2025-05-22 20:31:32,351 - INFO - Finding subdomains...
+2025-05-22 20:32:24,838 - WARNING - ⚠️ No scope validation - testing all discovered targets
+2025-05-22 20:32:24,838 - INFO - Discovering content...
+2025-05-22 20:32:49,640 - INFO - 🧠 AI analyzing discovered endpoints...
+2025-05-22 20:32:49,873 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:32:49,875 - ERROR - AI endpoint classification failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:32:49,876 - INFO - 🔍 Analyzing JavaScript files...
+2025-05-22 20:32:49,876 - INFO - 🔍 Discovering and analyzing JavaScript files for x.com
+2025-05-22 20:32:52,718 - INFO - ✅ JS analysis complete: 0 files, 0 endpoints, 0 secrets
+2025-05-22 20:32:52,720 - INFO - ✅ Enhanced recon complete: 58 endpoints, 10 interesting, 0 from JS
+2025-05-22 20:32:52,721 - INFO - 🎯 Starting enhanced vulnerability hunting...
+2025-05-22 20:32:52,721 - INFO - Testing: https://x.com/
+2025-05-22 20:32:52,860 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:32:52,861 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:32:52,862 - INFO - Testing: https://x.com/admin
+2025-05-22 20:32:53,163 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:32:53,164 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:32:53,165 - INFO - Testing: https://x.com/api
+2025-05-22 20:32:53,299 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:32:53,301 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:32:53,301 - INFO - Testing: https://x.com/login
+2025-05-22 20:32:53,540 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:32:53,541 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:32:53,542 - INFO - Testing: https://x.com/dashboard
+2025-05-22 20:32:53,683 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:32:53,684 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:32:53,685 - INFO - Testing: https://x.com/config
+2025-05-22 20:32:53,804 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:32:53,806 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:32:53,806 - INFO - Testing: https://x.com/backup
+2025-05-22 20:32:53,944 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:32:53,946 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:32:53,948 - INFO - Testing: https://x.com/test
+2025-05-22 20:32:54,075 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:32:54,077 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:32:54,077 - INFO - Testing: https://x.com/dev
+2025-05-22 20:32:54,214 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:32:54,216 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:32:54,217 - INFO - Testing: https://x.com/staging
+2025-05-22 20:32:54,342 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:32:54,344 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:32:54,344 - INFO - ✅ Enhanced vulnerability hunting complete: 0 potential issues found
+2025-05-22 20:32:54,345 - INFO - No findings to chain
+2025-05-22 20:32:54,346 - INFO - 💥 Generating exploits and PoCs with AI...
+2025-05-22 20:32:54,347 - INFO - ✅ PoC scripts generated in hunt_x_com_20250522_203110/poc_scripts
+2025-05-22 20:32:54,348 - INFO - ✅ Enhanced exploit generation complete
+2025-05-22 20:32:54,349 - INFO - 📝 Generating enhanced professional report...
+2025-05-22 20:32:54,349 - ERROR - ❌ Enhanced hunt failed: unsupported operand type(s) for -: 'float' and 'str'
+2025-05-22 20:41:17,660 - INFO - 🚀 Enhanced Bug Bounty Assistant initialized
+2025-05-22 20:41:17,660 - INFO - 🎯 Starting enhanced hunt on x.com
+2025-05-22 20:41:17,661 - INFO - 📁 Workspace: hunt_x_com_20250522_204117
+2025-05-22 20:41:17,661 - INFO - 🔍 Gathering target intelligence for x.com
+2025-05-22 20:41:17,661 - INFO - 🚨 Aggressive mode enabled - WAF evasion active
+2025-05-22 20:41:17,661 - INFO - 📖 WAF Contingency Guide available in workspace
+2025-05-22 20:41:17,661 - INFO - 🧠 Analyzing target with AI...
+2025-05-22 20:41:37,948 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-22 20:41:37,954 - INFO - ✅ Enhanced target analysis complete
+2025-05-22 20:41:37,954 - INFO - 🔍 Starting intelligent reconnaissance...
+2025-05-22 20:41:37,954 - INFO - Finding subdomains...
+2025-05-22 20:47:02,394 - WARNING - ⚠️ No scope validation - testing all discovered targets
+2025-05-22 20:47:02,394 - INFO - Discovering content...
+2025-05-22 20:47:18,768 - INFO - 🧠 AI analyzing discovered endpoints...
+2025-05-22 20:47:19,082 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:47:19,083 - ERROR - AI endpoint classification failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:47:19,084 - INFO - 🔍 Analyzing JavaScript files...
+2025-05-22 20:47:19,084 - INFO - 🔍 Discovering and analyzing JavaScript files for x.com
+2025-05-22 20:47:21,717 - INFO - ✅ JS analysis complete: 0 files, 0 endpoints, 0 secrets
+2025-05-22 20:47:21,730 - INFO - ✅ Enhanced recon complete: 40 endpoints, 10 interesting, 0 from JS
+2025-05-22 20:47:21,730 - INFO - 🎯 Starting enhanced vulnerability hunting...
+2025-05-22 20:47:21,730 - INFO - Testing: https://x.com/
+2025-05-22 20:47:21,858 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:47:21,860 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:47:21,860 - INFO - Testing: https://x.com/admin
+2025-05-22 20:47:21,965 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:47:21,966 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:47:21,967 - INFO - Testing: https://x.com/api
+2025-05-22 20:47:22,084 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:47:22,086 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:47:22,086 - INFO - Testing: https://x.com/login
+2025-05-22 20:47:22,204 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:47:22,205 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:47:22,205 - INFO - Testing: https://x.com/dashboard
+2025-05-22 20:47:22,317 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:47:22,319 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:47:22,320 - INFO - Testing: https://x.com/config
+2025-05-22 20:47:22,439 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:47:22,440 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:47:22,441 - INFO - Testing: https://x.com/backup
+2025-05-22 20:47:22,561 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:47:22,562 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:47:22,562 - INFO - Testing: https://x.com/test
+2025-05-22 20:47:22,702 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:47:22,704 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:47:22,704 - INFO - Testing: https://x.com/dev
+2025-05-22 20:47:22,815 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:47:22,816 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:47:22,817 - INFO - Testing: https://x.com/staging
+2025-05-22 20:47:22,949 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-05-22 20:47:22,951 - ERROR - AI payload generation failed: Error code: 400 - {'error': {'message': "Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2025-05-22 20:47:22,952 - INFO - ✅ Enhanced vulnerability hunting complete: 0 potential issues found
+2025-05-22 20:47:22,953 - INFO - No findings to chain
+2025-05-22 20:47:22,953 - INFO - 💥 Generating exploits and PoCs with AI...
+2025-05-22 20:47:22,953 - INFO - ✅ PoC scripts generated in hunt_x_com_20250522_204117/poc_scripts
+2025-05-22 20:47:22,954 - INFO - ✅ Enhanced exploit generation complete
+2025-05-22 20:47:22,955 - INFO - 📝 Generating enhanced professional report...
+2025-05-22 20:47:22,955 - ERROR - ❌ Enhanced hunt failed: unsupported operand type(s) for -: 'float' and 'str'

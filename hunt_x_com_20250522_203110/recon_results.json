@@ -1,0 +1,450 @@
+{
+  "subdomains": [
+    "mobile-api.payments-prod.x.com",
+    "privacy.x.com",
+    "5yk7i.x.com",
+    "a01f0ce6754f005971cb5dfa4708eecd.x.com",
+    "117c2010f624ccb54390f3989f23c431.x.com",
+    "cards.x.com",
+    "1d361860a5555d78bac7ff1c07aa47d7.x.com",
+    "create.x.com",
+    "dmarc.x.com",
+    "a2266353ea400f620bcf8550f00545b9.x.com",
+    "09q61.x.com",
+    "livecampaign-staging.x.com",
+    "localhost.x.com",
+    "api.payments-dev.x.com",
+    "amateursfromeverywhere4.x.com",
+    "a9nmm.x.com",
+    "000057.x.com",
+    "78d2e650d6a95ba37e4abc645075f6b5.x.com",
+    "ias.x.com",
+    "probe-t.x.com"
+  ],
+  "endpoints": [
+    {
+      "url": "https://x.com/",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/admin",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/api",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/login",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/dashboard",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/config",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/backup",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/test",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/dev",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/staging",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/files",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/docs",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/graphql",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/robots.txt",
+      "status": 200,
+      "length": 1350,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/sitemap.xml",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/.env",
+      "status": 403,
+      "length": 4509,
+      "title": "Attention Required! | Cloudflare"
+    },
+    {
+      "url": "https://x.com/.git",
+      "status": 403,
+      "length": 4509,
+      "title": "Attention Required! | Cloudflare"
+    },
+    {
+      "url": "https://x.com/wp-admin",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/admin",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/api",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/login",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/dashboard",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/config",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/backup",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/test",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/dev",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/staging",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/uploads",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/files",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/docs",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/swagger",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/graphql",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/robots.txt",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/sitemap.xml",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/.env",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/.git",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://mobile-api.payments-prod.x.com/wp-admin",
+      "status": 464,
+      "length": 0,
+      "title": ""
+    },
+    {
+      "url": "https://privacy.x.com/",
+      "status": 200,
+      "length": 63691,
+      "title": "Privacy"
+    },
+    {
+      "url": "https://privacy.x.com/admin",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://privacy.x.com/api",
+      "status": 200,
+      "length": 63691,
+      "title": "Privacy"
+    },
+    {
+      "url": "https://privacy.x.com/login",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://privacy.x.com/dashboard",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://privacy.x.com/config",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://privacy.x.com/backup",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://privacy.x.com/test",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://privacy.x.com/dev",
+      "status": 200,
+      "length": 63691,
+      "title": "Privacy"
+    },
+    {
+      "url": "https://privacy.x.com/staging",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://privacy.x.com/uploads",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://privacy.x.com/files",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://privacy.x.com/docs",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://privacy.x.com/swagger",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://privacy.x.com/graphql",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    },
+    {
+      "url": "https://privacy.x.com/robots.txt",
+      "status": 200,
+      "length": 193,
+      "title": ""
+    },
+    {
+      "url": "https://privacy.x.com/sitemap.xml",
+      "status": 404,
+      "length": 116,
+      "title": ""
+    },
+    {
+      "url": "https://privacy.x.com/.env",
+      "status": 403,
+      "length": 4509,
+      "title": "Attention Required! | Cloudflare"
+    },
+    {
+      "url": "https://privacy.x.com/.git",
+      "status": 403,
+      "length": 4509,
+      "title": "Attention Required! | Cloudflare"
+    },
+    {
+      "url": "https://privacy.x.com/wp-admin",
+      "status": 404,
+      "length": 3656,
+      "title": "X / ?"
+    }
+  ],
+  "technologies": [],
+  "interesting_findings": [
+    {
+      "url": "https://x.com/",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/admin",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/api",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/login",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/dashboard",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/config",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/backup",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/test",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/dev",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    },
+    {
+      "url": "https://x.com/staging",
+      "status": 400,
+      "length": 2540,
+      "title": ""
+    }
+  ],
+  "javascript_analysis": {
+    "js_files_found": 0,
+    "endpoints_discovered": [],
+    "secrets_found": [],
+    "vulnerabilities_detected": [],
+    "ai_analysis": [],
+    "files_analyzed": []
+  },
+  "scope_validation": {
+    "in_scope_targets": [],
+    "out_of_scope_targets": [],
+    "validation_enabled": true
+  }
+}

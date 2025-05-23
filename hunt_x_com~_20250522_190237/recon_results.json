@@ -1,0 +1,19 @@
+{
+  "subdomains": [],
+  "endpoints": [],
+  "technologies": [],
+  "interesting_findings": [],
+  "javascript_analysis": {
+    "js_files_found": 0,
+    "endpoints_discovered": [],
+    "secrets_found": [],
+    "vulnerabilities_detected": [],
+    "ai_analysis": [],
+    "files_analyzed": []
+  },
+  "scope_validation": {
+    "in_scope_targets": [],
+    "out_of_scope_targets": [],
+    "validation_enabled": true
+  }
+}

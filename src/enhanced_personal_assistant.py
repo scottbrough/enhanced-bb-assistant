@@ -139,10 +139,9 @@ class EnhancedBugBountyAssistant:
             response = self.client.chat.completions.create(
                 model="gpt-4",
                 messages=[{"role": "user", "content": prompt}],
-                response_format={"type": "json_object"},
                 temperature=0.7
             )
-            
+            # Expect JSON in content, parse manually
             analysis = json.loads(response.choices[0].message.content)
             
             # Add program-specific insights
@@ -406,7 +405,6 @@ class EnhancedBugBountyAssistant:
             response = self.client.chat.completions.create(
                 model="gpt-4",
                 messages=[{"role": "user", "content": prompt}],
-                response_format={"type": "json_object"},
                 temperature=0.7
             )
             

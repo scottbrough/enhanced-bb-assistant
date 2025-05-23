@@ -1,0 +1,13 @@
+{
+  "target": "x.com~",
+  "platform": null,
+  "program_handle": null,
+  "program_info": {},
+  "start_time": "2025-05-22T19:02:37.701646",
+  "workspace": "hunt_x_com~_20250522_190237",
+  "findings": [],
+  "chains": [],
+  "reports": [],
+  "aggressive_mode": true,
+  "scope_validation": true
+}

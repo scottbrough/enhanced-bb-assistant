@@ -480,16 +480,13 @@ class JavaScriptAnalyzer:
             response = self.client.chat.completions.create(
                 model="gpt-4",
                 messages=[{"role": "user", "content": prompt}],
-                response_format={"type": "json_object"},
                 temperature=0.3
             )
-            
+            # Expect JSON in content, parse manually
             ai_analysis = json.loads(response.choices[0].message.content)
             ai_analysis['source'] = source_url
             ai_analysis['content_size'] = len(content)
-            
             return ai_analysis
-            
         except Exception as e:
             logger.error(f"AI analysis failed for {source_url}: {e}")
             return {

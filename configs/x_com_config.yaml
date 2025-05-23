@@ -1,0 +1,146 @@
+# Enhanced Personal Bug Bounty Assistant Configuration for x.com
+# Version 2.0
+
+# API Configuration
+openai:
+  model: "gpt-4"
+  temperature: 0.7
+  max_tokens: 4000
+  timeout: 60
+
+# Platform Integration
+platforms:
+  hackerone:
+    enabled: true
+    base_url: "https://api.hackerone.com/v1"
+    auto_submit: false
+    rate_limit: 10
+  bugcrowd:
+    enabled: true
+    base_url: "https://api.bugcrowd.com/v2"
+    auto_submit: false
+    rate_limit: 15
+
+# Scope Validation
+scope_validation:
+  enabled: true
+  strict_mode: true
+  domain_validation: true
+  ip_validation: true
+  subdomain_validation: true
+  allowed_domains:
+    - "x.com"
+
+# Aggressive Testing Configuration
+aggressive_testing:
+  enabled: true
+  max_evasion_attempts: 10
+  waf_detection: true
+  evasion_techniques:
+    - encoding
+    - case_variation
+    - comment_insertion
+    - whitespace_manipulation
+    - parameter_pollution
+    - header_manipulation
+
+# Tool Integration
+tools:
+  subfinder: true
+  amass: true
+  ffuf: true
+  httpx: true
+  nuclei: true
+  gobuster: true
+
+# Reconnaissance Settings
+recon:
+  max_subdomains: 50
+  max_endpoints_per_target: 100
+  timeout: 15
+  threads: 10
+
+# JavaScript Analysis
+javascript_analysis:
+  enabled: true
+  max_files_to_analyze: 15
+  ai_analysis_for_large_files: true
+  min_file_size_for_ai: 1000
+  max_file_size: 5242880
+  secret_patterns:
+    - api_key
+    - access_token
+    - secret_key
+    - password
+    - database_url
+    - aws_key
+    - jwt_token
+    - oauth_token
+  endpoint_extraction: true
+  vulnerability_patterns: true
+
+# Reporting Settings
+reporting:
+  formats:
+    - markdown
+    - html
+    - json
+  include_screenshots: false
+  include_poc_scripts: true
+  cvss_calculation: true
+  remediation_advice: true
+  platform_templates:
+    hackerone:
+      include_cvss: true
+      include_cwe: true
+      include_owasp: true
+    bugcrowd:
+      include_vrt: true
+      include_impact: true
+
+# Output and Workspace
+output:
+  workspace_base: "./hunts"
+  save_raw_responses: false
+  compress_workspace: false
+  auto_cleanup_days: 30
+  backup_results: true
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  file_logging: true
+  console_logging: true
+  log_rotation: true
+  max_log_size: "10MB"
+  backup_count: 5
+
+# Security and Safety
+security:
+  blocked_domains:
+    - "localhost"
+    - "127.0.0.1"
+    - "::1"
+    - "0.0.0.0"
+    - "internal"
+    - "corp"
+    - "local"
+  max_auto_exploit_severity: "medium"
+  manual_confirmation_required:
+    - "rce_testing"
+    - "sql_injection_exploitation"
+    - "file_upload_testing"
+
+# Performance Tuning
+performance:
+  max_memory_usage: "2GB"
+  max_cpu_usage: 80
+  cache_results: true
+  cache_ttl: 3600
+
+# Development and Debugging
+debug:
+  enabled: false
+  save_debug_info: false
+  verbose_ai_prompts: false
+  mock_external_apis: false
